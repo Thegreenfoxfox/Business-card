@@ -1,0 +1,75 @@
+ul{
+    list-style-type:none;/*убираем маркеры*/
+    padding-left:0; /*убираем стандартный отступ списка*/
+    }
+li{
+    margin-left: 20px;/*Отступы между пунктами*/
+    text-decoration: none;/*Убираем стандартное подчеркивание у пунктов меню*/
+}
+
+a{
+    color:inherit; /*наследует цвет текста от родителя(как обычный текст)*/
+    text-decoration: none; /*убирает подчеркивание*/
+    /*Дополнительный сброс стилей для всех состояний*/
+    a:link,
+    a:visited,
+    a:hover,
+    a:active{
+        color:inherit;
+        text-decoration: none;
+        cursor:pointer; /* Курсор в виде руки*/
+    }
+}
+
+h1 {
+    margin:0;
+    font-size:2.5rem;
+    font-weight:700;
+    color:#2E3A59;
+}
+p{
+    font-size:1.5rem;
+    font-weight: 400;
+    color:#2E3A59;
+}
+header{
+    display:flex;
+    justify-content:space-between;
+}
+.navigation ul {display:flex;
+margin-right: 50px;}
+
+.about-me__image {
+    width: 450px;
+    width: 450px;
+
+
+}
+
+@media (max-width: 600px) {
+    .about-me__image {
+        width: 150px;
+        height:150px/* Уменьшаем на мобильных */
+    }
+}
+@media (max-width: 1500px) {
+    .about-me__image {
+        width: 300px;
+        height:300px/* Уменьшаем на мобильных */
+    }
+}
+
+.about-me__container{
+    display: flex;
+    margin-left: 50px;
+}
+
+.about-me__text {
+    max-width: 1300px; /* Ширина не превысит 600px */
+    width: 100%; /* Занимает всё доступное пространство */
+    margin: 0 40px; /* Центрирование */
+}
+
+.profile{
+    margin-left: 50px;
+}
