@@ -7,12 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Business-card</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 <header>
     <div class="profile">
     <h1 class="profile__name">Ekaterina Krylova</h1>
-    <h2 class="profile__role" >Frontend Developer</h2>
+    <p class="profile__role" >Frontend Developer</p>
+        <img src="images/leaf_top_up.png" alt="листик" class="profile__leaf">
     </div>
 <section class="navigation">
     <nav>
@@ -29,33 +31,52 @@
 <section class="about-me">
     <div class="about-me__container">
     <img class="about-me__image" src="Brief.jpg" alt="image with me" />
- <div class="about_me__text">
-    <p>About me</p>
-    <p>Hello! My name is Ekaterina Krylova, and I'm a Frontend Developer with a background in UI/UX design and digital learning content development.
-
-    I hold a Mater's degree in Information Systems and Technologies, and I've always been drawn to the intersection of logic and creativity — that's what led me into frontend development.
+ <div class="about-me__text">
+    <h2 class="about-me__title">About me</h2>
+    <p class="short-text">Hello! My name is Ekaterina Krylova, and I'm a Frontend Developer with a background in UI/UX design and digital learning content development.</p>
+    <div class="full-text hidden">
+   <p> I hold a Mater's degree in Information Systems and Technologies, and I've always been drawn to the intersection of logic and creativity — that's what led me into frontend development.
         I started my career designing user interfaces at a software company, then worked on creating educational courses where I combined tech and visual storytelling. After a break, I’ve returned to tech with a fresh mindset and strong motivation to grow.
         Right now, I'm focusing on improving my skills in HTML, CSS, JavaScript, and Git. I'm building projects, expanding my portfolio, and preparing to join a thoughtful and inspiring development team.
         I love writing clean, accessible code and designing experiences that are both functional and beautiful.
         You can find my work on GitHub (https://github.com/Thegreenfoxfox/Portfolio) and Behance, or reach out on Telegram — I’d be happy to connect! </p>
+    </div>
+     <button id="toggle-about">Read more</button>
  </div>
     </div>
-    <button id="toggle-about">Read more</button>
+
 </section>
 
 <section class="skills">
-        <ul>
-            <li><a href='#'>HTML</a></li>
-            <li><a href='#'>CSS</a></li>
-            <li><a href='#'>JavaScript</a></li>
-            <li><a href='#'>React</a></li>
+    <h2 class="skills__title" >Skills</h2>
+        <ul class="skills__list" >
+            <li class="skills__item">HTML</li>
+            <li class="skills__item">CSS</li>
+            <li class="skills__item">JavaScript</li>
+            <li class="skills__item">React</li>
         </ul>
-
 </section>
+
 <section class="experience">
-
+    <h2 class ="experience__title">Experience</h2>
+    <div class="experience__container">
+        <div class="experience__item">
+            <h3 class="experience__company">Labmedia</h3>
+            <div class="experience__date"> November 2024- March 2025</div>
+            <div class="experience__position">E-learning Developer</div>
+        </div>
+        <div class="experience__item">
+            <h3 class="experience__company">Tensor</h3>
+            <div class="experience__date"> February 2020 - February 2021</div>
+            <div class="experience__position">User Interface Designer</div>
+        </div>
+    </div>
 </section>
-<section class="projects"></section>
-<section class="contacts"></section>
+<section class="projects">
+    <h2>Portfolio Projects</h2>
+</section>
+<section class="contacts">
+    <h2>Contact</h2>
+</section>
 </body>
 </html>

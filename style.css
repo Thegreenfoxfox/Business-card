@@ -2,11 +2,13 @@ ul{
     list-style-type:none;/*убираем маркеры*/
     padding-left:0; /*убираем стандартный отступ списка*/
     }
+
 li{
     margin-left: 20px;/*Отступы между пунктами*/
     text-decoration: none;/*Убираем стандартное подчеркивание у пунктов меню*/
-}
+    display: inline-block;
 
+}
 a{
     color:inherit; /*наследует цвет текста от родителя(как обычный текст)*/
     text-decoration: none; /*убирает подчеркивание*/
@@ -42,9 +44,11 @@ margin-right: 50px;}
 .about-me__image {
     width: 450px;
     width: 450px;
-
-
 }
+.about-me__text {
+    margin-left: 50px;
+}
+
 
 @media (max-width: 600px) {
     .about-me__image {
@@ -72,4 +76,78 @@ margin-right: 50px;}
 
 .profile{
     margin-left: 50px;
+}
+
+.skills ul
+    {display:flex;
+    margin-right: 50px;}
+
+button#toggle-about {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button#toggle-about:hover {
+    background-color: #388e3c;
+}
+
+.full-text.hidden {
+    display: none;
+}
+
+.skills{
+    margin-left: 50px;
+}
+.experience{
+    margin-left: 50px;
+}
+
+.projects{
+    margin-left: 50px;
+}
+.contacts{
+    margin-left: 50px;
+}
+
+.skills__item{
+    margin-left: 20px;/*Отступы между пунктами*/
+    text-decoration: none;/*Убираем стандартное подчеркивание у пунктов меню*/
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 999px;
+    background-color: #dbeddc;
+    color: #053207;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.skills__item:first-child {
+    margin-left: 0; /* Убираем внешний отступ */
+}
+
+.experience__container {
+    display: flex;
+}
+
+.experience__item:last-child {
+    margin-left: 20px;
+}
+
+.profile__leaf {
+    position: absolute;
+    top: 0; right: 0; /*размещаем элемент строго в правом верхнем углу*/
+    width: 300px; /* устанавливаем размер листа */
+    transform: rotate(-90deg); /* немного поворачиваем */
+    z-index: -1; /* помещаем листик за остальными элементами */
+    pointer-events: none; /* делаем его не кликабельным, чтобы не мешал другим элементам */
+}
+
+header{
+    position: relative;
 }
