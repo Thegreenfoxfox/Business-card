@@ -37,50 +37,64 @@ p{
 header{
     display:flex;
     justify-content:space-between;
-}
-.navigation ul {display:flex;
-margin-right: 50px;}
-
-.about-me__image {
-    width: 450px;
-    width: 450px;
-}
-.about-me__text {
-    margin-left: 50px;
-}
-
-
-@media (max-width: 600px) {
-    .about-me__image {
-        width: 150px;
-        height:150px/* Уменьшаем на мобильных */
-    }
-}
-@media (max-width: 1500px) {
-    .about-me__image {
-        width: 300px;
-        height:300px/* Уменьшаем на мобильных */
-    }
-}
-
-.about-me__container{
-    display: flex;
-    margin-left: 50px;
-}
-
-.about-me__text {
-    max-width: 1300px; /* Ширина не превысит 600px */
-    width: 100%; /* Занимает всё доступное пространство */
-    margin: 0 40px; /* Центрирование */
+    position:relative;
 }
 
 .profile{
     margin-left: 50px;
 }
 
-.skills ul
-    {display:flex;
-    margin-right: 50px;}
+.profile__leaf {
+    position: absolute;
+    top: 0; right: 0; /*размещаем элемент строго в правом верхнем углу*/
+    width: 300px; /* устанавливаем размер листа */
+    transform: rotate(-90deg); /* немного поворачиваем */
+    z-index: -1; /* помещаем листик за остальными элементами */
+    pointer-events: none; /* делаем его не кликабельным, чтобы не мешал другим элементам */
+}
+
+.navigation ul
+{display:flex;
+margin-right: 50px;}
+
+.about-me__image {
+    width: 100%;
+    max-width: 450px;
+    height: auto; /*  автоматическая высота, пропорции сохраняются */
+    align-self: flex-start; /*  не даёт растянуть родителя */
+    object-fit: cover; /*  чтобы изображение не искажалось */
+}
+
+.about-me__container{
+    display: flex;
+    margin-left: 50px;
+    align-items: flex-start;
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+.about-me__text {
+    margin-left: 50px;
+    align-self: flex-start;
+    max-width: 1300px; /* Ширина не превысит 600px */
+    width: 100%; /* Занимает всё доступное пространство */
+
+}
+
+@media (max-width: 600px) { /* адаптив под мобильные устройства*/
+    .about-me__image {
+        max-width: 300px;}
+    }
+
+@media (max-width: 900px){/*адаптив под Планшеты*/
+    .about-me__image {
+        max-width: 400px;}
+}
+
+@media (min-width: 900px) {/*адаптив под Компьютеры*/
+    .about-me__image {
+        max-width: 500px;
+    }
+}
 
 button#toggle-about {
     margin-top: 1rem;
@@ -101,19 +115,14 @@ button#toggle-about:hover {
     display: none;
 }
 
-.skills{
-    margin-left: 50px;
-}
-.experience{
-    margin-left: 50px;
-}
 
-.projects{
-    margin-left: 50px;
+.skills{
+    display: flex;
 }
-.contacts{
-    margin-left: 50px;
-}
+.skills ul
+{   display:flex;
+    margin-right: 50px;}
+
 
 .skills__item{
     margin-left: 20px;/*Отступы между пунктами*/
@@ -131,6 +140,11 @@ button#toggle-about:hover {
     margin-left: 0; /* Убираем внешний отступ */
 }
 
+.skills__container{
+    display: flex;
+    flex-direction: column;
+}
+
 .experience__container {
     display: flex;
 }
@@ -139,15 +153,16 @@ button#toggle-about:hover {
     margin-left: 20px;
 }
 
-.profile__leaf {
-    position: absolute;
-    top: 0; right: 0; /*размещаем элемент строго в правом верхнем углу*/
-    width: 300px; /* устанавливаем размер листа */
-    transform: rotate(-90deg); /* немного поворачиваем */
-    z-index: -1; /* помещаем листик за остальными элементами */
-    pointer-events: none; /* делаем его не кликабельным, чтобы не мешал другим элементам */
+
+
+
+.skills,
+.experience,
+.projects,
+.contacts {
+    margin-left:600px; /* ширина фото + отступы */
 }
 
-header{
-    position: relative;
+.experience__date, .experience__position,.experience__company,skills__item{
+    font-size:24px;
 }
