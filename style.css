@@ -182,3 +182,6 @@ button#about-me__toggle:hover {
 .experience {
     margin-top: 20px;
 }
+.test {
+    display: none;
+}
