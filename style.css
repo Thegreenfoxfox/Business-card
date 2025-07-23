@@ -65,15 +65,10 @@ margin-right: 50px;}
     object-fit: cover; /*  чтобы изображение не искажалось */
 }
 
-.about-me__container{
-    display: flex;
-    margin-left: 50px;
-    align-items: flex-start;
-    background-color: rgba(0, 255, 0, 0.1);
-}
+
 
 .about-me__text {
-    margin-left: 50px;
+
     align-self: flex-start;
     max-width: 1300px; /* Ширина не превысит 600px */
     width: 100%; /* Занимает всё доступное пространство */
@@ -96,7 +91,7 @@ margin-right: 50px;}
     }
 }
 
-button#toggle-about {
+button#about-me__toggle {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -107,17 +102,18 @@ button#toggle-about {
     cursor: pointer;
 }
 
-button#toggle-about:hover {
+button#about-me__toggle:hover {
     background-color: #388e3c;
 }
 
-.full-text.hidden {
+.about-me__details.hidden {
     display: none;
 }
 
 
 .skills{
     display: flex;
+    margin-top: 50px;
 }
 .skills ul
 {   display:flex;
@@ -154,15 +150,35 @@ button#toggle-about:hover {
 }
 
 
-
-
-.skills,
-.experience,
-.projects,
-.contacts {
-    margin-left:600px; /* ширина фото + отступы */
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px;
 }
 
-.experience__date, .experience__position,.experience__company,skills__item{
+.about-me__container {
+    display: flex;
+    align-items: flex-start;
+    gap: 195px;
+    margin-bottom: 50px;
+}
+
+.main__content {
+    max-width: 1300px; /* подогнать под ширину текста */
+    margin:0 auto;
+
+}
+
+.experience__date, .experience__position,.experience__company,.skills__item{
     font-size:24px;
+}
+
+.skills {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.experience {
+    margin-top: 20px;
 }

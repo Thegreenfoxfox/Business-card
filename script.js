@@ -1,5 +1,5 @@
-const toggleBtn = document.getElementById("toggle-about");/*находим кнопку по ID toggle-about и сохраняем ее в переменную toggleBtn*/
-const fullText = document.querySelector(".full-text");/*находим элемент, в котором находится длинный текст, по классу .full-text*/
+const toggleBtn = document.getElementById("about-me__toggle");/*находим кнопку по ID about-me__toggle  и сохраняем ее в переменную toggleBtn*/
+const fullText = document.querySelector(".about-me__details");/*находим элемент, в котором находится длинный текст, по классу .about-me__details*/
 
 toggleBtn.addEventListener("click", () => { /*добавляем обработчик события: когда пользователь нажимает на кнопку, запускается функция*/
     fullText.classList.toggle("hidden"); /* включаем и выключаем видимость текста*/
